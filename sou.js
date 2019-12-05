@@ -23,7 +23,7 @@ $(document).ready(function() {
                 window.location.href = "https://www.google.com/?hl=zh";
             } else {
             	$("form").attr('action', 'https://www.google.com/search?hl=zh');
-            	$(".wd").name("q");
+            	$(".wd").attr("name","q");
                 $(".t").val("g");
                 $("form").submit();
             }
@@ -32,7 +32,7 @@ $(document).ready(function() {
                 window.location.href = "https://www.baidu.com/?tn=simple";
             } else {
             	$("form").attr('action', 'https://www.baidu.com/s?ie=utf-8');
-            	$(".wd").name("wd");
+            	$(".wd").attr("name","wd");
                 $(".t").val("b");
                 $("form").submit();
             }
