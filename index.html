@@ -112,30 +112,21 @@
             <li><a rel="nofollow" href="https://www.swiper.com.cn/" target="_blank"><i class="iconfont icon-S" style="color:#065fe3;"></i>Swiper</a></li>
         </ul>
     </div>
-    <div class="mywth" id="he-plugin-simple"></div>
-<script>
-WIDGET = {
-  CONFIG: {
-    "modules": "012",
-    "background": 5,
-    "tmpColor": "4A4A4A",
-    "tmpSize": "14",
-    "cityColor": "4A4A4A",
-    "citySize": "14",
-    "aqiSize": 16,
-    "weatherIconSize": "24",
-    "alertIconSize": "16",
-    "padding": "10px 10px 10px 10px",
-    "shadow": "0",
-    "language": "auto",
-    "fixed": "false",
-    "vertical": "middle",
-    "horizontal": "left",
-    "key": "9d0f544ca474410381a986626375fb43"
-  }
-}
-</script>
-<script src="https://widget.heweather.net/simple/static/js/he-simple-common.js?v=1.1"></script>
+   <div id="tp-weather-widget" class="mywth"></div>
+  <script>
+    (function(a,h,g,f,e,d,c,b){b=function(){d=h.createElement(g);c=h.getElementsByTagName(g)[0];d.src=e;d.charset="utf-8";d.async=1;c.parentNode.insertBefore(d,c)};a["SeniverseWeatherWidgetObject"]=f;a[f]||(a[f]=function(){(a[f].q=a[f].q||[]).push(arguments)});a[f].l=+new Date();if(a.attachEvent){a.attachEvent("onload",b)}else{a.addEventListener("load",b,false)}}(window,document,"script","SeniverseWeatherWidget","//cdn.sencdn.com/widget2/static/js/bundle.js?t="+parseInt((new Date().getTime() / 100000000).toString(),10)));
+    window.SeniverseWeatherWidget('show', {
+      flavor: "slim",
+      location: "WX4FBXXFKE4F",
+      geolocation: true,
+      language: "zh-Hans",
+      unit: "c",
+      theme: "auto",
+      token: "fd08684d-bf66-4982-999d-4d0f260c236d",
+      hover: "enabled",
+      container: "tp-weather-widget"
+    })
+  </script>
 
     <div id="content">
         <div class="con">
