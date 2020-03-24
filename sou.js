@@ -12,7 +12,7 @@ $(document).ready(function() {
     if (wid < 640) {
         $(".wd").attr('autocomplete', 'off');
     }else{
-    	$(".wd").focus();
+        $(".wd").focus();
     }
     //按钮
     $(".sou li").click(function() {
@@ -22,8 +22,8 @@ $(document).ready(function() {
             if (wd == "" || wd == null) {
                 window.location.href = "https://www.google.com/?hl=zh";
             } else {
-            	$("form").attr('action', 'https://www.google.com/search?hl=zh');
-            	$(".wd").attr("name","q");
+                $("form").attr('action', 'https://www.google.com/search?hl=zh');
+                $(".wd").attr("name","q");
                 $(".t").val("g");
                 $("form").submit();
             }
@@ -31,8 +31,8 @@ $(document).ready(function() {
             if (wd == "" || wd == null) {
                 window.location.href = "https://www.baidu.com/?tn=simple";
             } else {
-            	$("form").attr('action', 'https://www.baidu.com/s?ie=utf-8');
-            	$(".wd").attr("name","wd");
+                $("form").attr('action', 'https://www.baidu.com/s?ie=utf-8');
+                $(".wd").attr("name","wd");
                 $(".t").val("b");
                 $("form").submit();
             }
@@ -58,4 +58,3 @@ $(document).ready(function() {
         }
     });
 });
-
