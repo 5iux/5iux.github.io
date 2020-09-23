@@ -1,538 +1,77 @@
-@charset "utf-8";
+body{ font-size: 14px; background: #f4f8fb; }
+svg.icon { width: 14px; height: 14px; margin: 0 5px 0 8px; vertical-align: -0.15em; fill: currentColor; overflow: hidden;}
+/* --- search --- */
+#search{width:100%;margin:150px auto 60px; padding: 0px;}
+#search form{position:relative}
+#search-text{width:100%;height:50px; line-height: 50px; text-indent: 10px; font-size:16px;border-radius:5px;background-color:#fff; border:none; box-shadow: 0 0.5rem 0.625rem #d4d4d44d;transition: 0.3s all linear;}
+#search-text:focus{background: #fff; box-shadow: 0 0px 24px 0 rgba(50, 50, 50, 0.08); border-color: #fff; }
+#search button{position:absolute;top:0;right:0;background:none;border:0; border-radius:20px;width:60px;height:36px;margin:7px 0 0;line-height:36px;border-radius:3px; outline: none;}
+#search button:hover{cursor:pointer}
+#search button i{color:#ddd;font-size:18px}
+.search-group{display:none;padding-left:75px}
+.s-current .search-type{padding-left:0;display:block}
+.s-current{display:block}
+#search-list{position:relative}
+.s-type{position:absolute;top:0;left:0;z-index:13;width:75px}
+.s-type:hover{height:auto}
+.s-type>span{display:block;height:31px;width:75px}
+.s-type-list{display:none;position:absolute;top:31px;padding:9pt 0;width:70px;background:#fff;border-radius:5px;box-shadow:0 9px 20px rgba(0,0,0,.16)}
+.s-type-list:before{position:absolute;top:-1pc;left:20px;content:'';display:block;width:0;height:0;border:10px solid transparent;border-bottom-color:#fff}
+.s-type-list label{display:block;font-size:15px;text-align:center;font-weight:normal;margin-bottom:0;padding:2px 0;cursor:pointer;transition:.3s}
+.s-type-list label:hover{background:rgba(136,136,136,.1)}
+.s-type-list .tile-lg{color:#fff;width:3pc;height:3pc;font-size:1.25rem;line-height:3rem;border-radius:.3rem;display:block;margin:auto}
+.s-type:hover .s-type-list{display:block}
+.type-text{position:absolute;left:0;width:75px;padding-left:9pt;font-size:1pc;line-height:31px}
+/*.type-text:after{content:"\f105";font-family:FontAwesome;margin:0 0 0 15px}*/
+.search-type{white-space:nowrap;margin:0}.search-type label{margin:0}
+.search-type li{display:inline-block}
+.search-type li label{display:inline-block;padding:0 11px;font-size:14px;line-height:31px;border-radius:3px 3px 0 0;cursor:pointer}
+.search-type input:checked+label,.search-type input:hover+label{background-color:#fff;box-shadow: -6px 10px 20px #eee}
+#search-text::-webkit-input-placeholder {color: #bbb;}
+.set-check{margin-top:3px;font-size:9pt}.set-check label{margin-left:3px}
+.set-check input,.set-check label{opacity:0;transition:all .3s ease}
+.search-type li{list-style:none;display:inline-block}
+.mylist{list-style: none; padding:30px 20px; margin: 40px 0; border-radius: 5px; background: #fff; box-shadow: 0 0.5rem 0.625rem #d4d4d44d}
+.mylist li{ min-width: 105px; margin:10px 0 0;  font-size: 14px; overflow: hidden; padding: 0;}
+.mylist li a {  color: #555;}
+.mylist li.title{width: auto; min-width: auto; margin: 0; position: absolute; margin-top: -50px; background: #29f; color: #fff; height: 35px; font-size: 16px; line-height: 33px; border-radius: 20px; box-shadow: 0 0.5rem 0.625rem #2299ff4d; padding: 0 20px 0 10px;}
+.mylist li.title .icon{color: #fff;}
+@media screen and (min-width:1200px){
+    .mylist li{ min-width: 118px;}
 
-/*
-作者:D.Young
-主页：https://yyv.me/
-github：https://github.com/5iux/sou
-日期：2019-07-11
-版权所有，请勿删除
-*/
-
-
-/*@import url(//fonts.loli.net/earlyaccess/notosansscsliced.css);*/
-
-* {
-    padding: 0;
-    margin: 0;
-    outline: none;
-    -webkit-tap-highlight-color: transparent;
+}
+@media screen and (max-width: 992px){
+    #he-plugin-simple{ overflow: hidden ; }
+}
+@media screen and (max-width:767px){
+    #search{margin:25px auto 15px}
+    .s-type-list label{padding:5px 0}
+    .search-type{overflow:hidden}
+    .search-list{height:30px;overflow-y:hidden;overflow-x:scroll;white-space:nowrap}
 }
 
-html,
-body {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    overflow: hidden;
-    background: #fff;
-}
 
-html {
-    font-family: 'Noto Sans SC Sliced', PingFangSC-Light, Microsoft YaHei UI, Microsoft YaHei, helvetica, sans-serif;
-    font-weight: 300;
-    color: #000;
-}
-
-form,
-input,
-button {
-    padding: 0;
-    margin: 0;
-    border: none;
-    outline: none;
-    background: none;
-}
-
-input::-webkit-input-placeholder {
-    color: #ccc;
-    letter-spacing: 2px;
-    font-size: 16px;
-}
-
-ul,
-li {
-    display: block;
-    list-style: none;
-}
-
-a {
-    text-decoration: none;
-    color: #000;
-}
-
-#content {
-    width: 100%;
-    height: 100%;
-}
-
-.con {
-    width: 100%;
-    transition: 1s all;
-    margin: auto;
-    min-width: 320px;
-    height: 380px;
-    position: absolute;
-    left: 0;
-    top: -100px;
-    right: 0;
-    bottom: 0;
-}
-
-.con .shlogo {
-    position: relative;
-    width: 480px;
-    height: 120px;
-    margin: 20px auto;
-    background: url(icon/logo.svg) no-repeat center/cover;
-}
-
-.con .shlogo a {
-    width: 100%;
-    display: block;
-    width: 100%;
-    height: 100%;
-}
-
-.con .sou {
-    max-width: 680px;
-    position: relative;
-    width: calc(100% - 60px);
-    min-width: 320px;
-    margin: 0 auto;
-}
-
-.con .sou form {
-    width: 100%;
-    /*border: 1px solid #ddd;*/
-    height: 50px;
-    display: block;
-    margin: 10px auto 30px;
-    position: relative;
-}
-
-.con .sou form .wd {
-    width: 100%;
-    height: 100%;
-    display: block;
-    border: 1px solid #ddd;
-    border-radius: 25px;
-    line-height: 100%;
-    text-indent: 20px;
-    font-size: 18px;
-}
-
-.con .sou form .wd:focus {
-    background: #fff;
-    box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
-    border-color: #fff
-}
-
-.con .sou form button {
-    width: 40px;
-    height: 40px;
-    display: block;
-    position: absolute;
-    z-index: 10;
-    right: 6px;
-    top: 6px;
-    cursor: pointer;
-    font-size: 22px;
-    line-height: 40px;
-    border-radius: 50%;
-    color: #777;
-}
-
-.con .sou ul {
-    height: 40px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-}
-
-.con .sou ul li {
-    width: 120px;
-    margin: 0 10px;
-    float: left;
-    -webkit-tap-highlight-color: transparent;
-    background: #eee;
-    font-size: 16px;
-    height: 40px;
-    line-height: 40px;
-    text-align: center;
-    text-indent: 30px;
-    cursor: pointer;
-    position: relative;
-    border-radius: 20px;
-}
-
-.con .sou ul li:active {
-    background: #fff;
-    box-shadow: 0 1px 20px 0 rgba(0, 0, 0, .1);
-}
-
-.con .sou ul li i {
-    position: absolute;
-    display: block;
-    width: 40px;
-    height: 40px;
-    left: 0;
-    border-radius: 50%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: #fff;
-    transform: scale(0.7);
-}
-
-.foot {
-    position: absolute;
-    bottom: 10px;
-    z-index: 1000;
-    text-align: center;
-    width: 100%;
-    color: #999;
-    height: 20px;
-    line-height: 20px;
-    font-size: 12px;
-}
-
-.home {
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    right: 70px;
-    top: 10px;
-    z-index: 200;
-    cursor: pointer;
-}
-
-.home a {
-    font-size: 20px;
-    color: #999;
-    line-height: 50px;
-    display: block;
-    text-align: center;
-}
-
-#menu {
-    width: 50px;
-    height: 50px;
-    transform: scale(0.8);
-    position: absolute;
-    right: 10px;
-    top: 5px;
-    z-index: 2000000;
-    cursor: pointer;
-    transition: 0.5s;
-}
-
-#menu i {
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: 24px auto;
-    width: 30px;
-    height: 2px;
-    background: #777;
-}
-
-#menu i:before {
-    content: '';
-    width: 20px;
-    height: 2px;
-    top: -8px;
-    background: #777;
-    position: absolute;
-    right: 0;
-}
-
-#menu i:after {
-    content: '';
-    width: 20px;
-    height: 2px;
-    bottom: -8px;
-    background: #777;
-    position: absolute;
-    left: 0;
-}
-
-#menu.on {
-    right: 380px;
-    background: #29f;
-    border-radius: 25px;
-    box-shadow: 0 6px 8px rgba(36, 159, 253, .3);
-}
-
-#menu.on i {
-    width: 20px;
-    background: #fff;
-}
-
-#menu.on i:before {
-    top: -5px;
-    transform: rotate(45deg);
-    width: 14px;
-    right: -1px;
-    left: auto;
-    background: #fff;
-}
-
-#menu.on i:after {
-    bottom: -5px;
-    transform: rotate(-45deg);
-    width: 14px;
-    right: -1px;
-    left: auto;
-    background: #fff;
-}
-
-.list {
-    width: 337px;
-    padding: 0 20px;
-    height: 100%;
-    overflow: hidden;
-    overflow-y: auto;
-    position: absolute;
-    right: 0px;
-    z-index: 2000;
-    background: #222d46;
-    transition: 0.3s all linear;
-}
-
-.list.closed {
-    right: -380px;
-}
-
-.list ul {
-    width: 330px;
-    float: left;
-    padding: 0 0 20px;
-    margin-bottom: 20px;
-}
-
-.list ul li {
-    float: left;
-    margin: 5px;
-    width: 100px;
-    height: 30px;
-    text-align: left;
-    line-height: 30px;
-}
-
-.list ul li a {
-    width: 100%;
-    border-radius: 5px;
-    transition: 0.2s all linear;
-    height: 100%;
-    display: block;
-    color: #fff;
-    font-weight: 500;
-    background: #293550;
-    text-align: left;
-    font-size: 12px;
-}
-
-/*.list ul li a i {
-    margin-right: 5px;
-    margin-left: 15px;
-    transition: 0.2s all linear;
-}
-
-.list ul li a i.iconfont {
-    font-size: 14px;
-}
-*/
-.list ul li:hover a {
-    color: #fff;
-    background-color: #29f;
-    background-image: linear-gradient(135deg, rgba(35, 153, 255) 0%, rgba(84, 175, 253) 100%);
-    box-shadow: 0 3px 3px rgba(0, 40, 70, .3);
-}
-
-/*.list ul li:hover a i {
-    color: #fff !important;
-}
-*/
-.list ul li.title {
-    width: 100%;
-    height: 40px;
-    line-height: 40px;
-    margin: 30px 0 0;
-    text-align: left;
-    text-indent: 10px;
-    /*border-bottom: 1px dashed #dedede;*/
-    color: #fff;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-/*.list ul li.title i {
-    color: #29f;
-    margin-right: 5px;
-    font-weight: normal;
-}*/
-
-.mywth {
-    position: absolute;
-    left: 20px;
-    top: 15px;
-    font-size: 12px;
-    height: 20px;
-    line-height: 20px;
-    cursor: pointer;
-    z-index: 100000;
-    height: 22px;
-}
-
-svg.icon {
-    width: 14px;
-    height: 14px;
-    margin: 0 5px 0 8px;
-    vertical-align: -0.15em;
-    fill: currentColor;
-    overflow: hidden;
-}
-
-.list ul li.title svg.icon {
-    width: 20px;
-    height: 20px;
-}
-
-@media (max-width: 640px) {
-    .con {
-        top: 0px;
-    }
-
-    .con .shlogo {
-        width: 320px;
-        height: 100px;
-    }
-
-    .con .sou form .wd:focus {
-        background: #f1f1f1;
-        box-shadow: none;
-        border-color: #ccc
-    }
-
-    .con .sou form button {
-        border-radius: 25px;
-    }
-
-    #menu.on {
-        right: 270px;
-    }
-
-    .list {
-        width: 227px;
-    }
-
-    .list ul {
-        width: 220px;
-    }
-
-    .con .sou ul li {
-        width: 100px;
-        font-size: 12px;
-        text-indent: 30px;
-    }
-
-    .home,
-    #menu {
-        top: 5px;
-    }
-
-    .mywth {
-        color: #777;
-        left: 10px;
-        top: 20px;
-        overflow: hidden;
-
-    }
-
-    .mywth.hidden {
-        display: none;
-    }
-}
-
-@media (max-height: 420px) {
-    .con {
-        margin: 0;
-        top: 0px;
-    }
-
-    .con .sou form .wd {
-        text-indent: 50px;
-    }
-
-    .con .sou form:after {
-        content: "";
-        display: block;
-        width: 30px;
-        height: 30px;
-        position: absolute;
-        left: 10px;
-        top: 10px;
-        background: url(icon/lg.svg) no-repeat center/cover;
-        border-radius: 50%;
-        overflow: hidden;
-    }
-
-    .con .shlogo {
-        display: none;
-    }
-
-    .home,
-    #menu,
-    .mywth,
-    .foot {
-        display: none;
-    }
-}
-
-@media (prefers-color-scheme: dark) {
-    body {
-        background-color: #162035;
-    }
-
-    .mywth {
-        color: #bbb;
-    }
-
-    .con .sou ul li {
-        background: #293550;
-        color: #fff;
-    }
-
-    .con .sou form .wd:focus {
-        background: #293550;
-        border: 1px solid #162035;
-    }
-
-    .con .sou form .wd {
-        border: 1px solid #293550;
-        color: #bbb;
-    }
-}
 
 ::-webkit-scrollbar {
-    width: 6px;
-    height: 6px;
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
 }
 
 ::-webkit-scrollbar-track {
-    background: #222d46;
+    background: #eee;
     border-radius: 0px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #293550;
+    background: #ccc;
     border-radius: 0px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #293550;
+    background: #29f;
 }
 
 ::-webkit-scrollbar-corner {
-    background: #222d46;
+    background: #ccc;
 }
