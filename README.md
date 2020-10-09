@@ -7,7 +7,9 @@
 
 链接1：[https://g.5iux.cn/](https://g.5iux.cn/)    
 
-链接2：[https://5iux.github.io](https://5iux.github.io/)   
+链接2：[https://5iux.github.io/](https://5iux.github.io/)   
+
+链接3：[https://5iux.netlify.app/](https://5iux.netlify.app/)   
 
  
 
