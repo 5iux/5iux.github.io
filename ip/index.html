@@ -268,7 +268,8 @@
                 $("#appspot").html(re.address + "&nbsp;|&nbsp;" + re.geographical);
             },
             error: function(re) {
-                ping('https://www.google.com.hk/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png');
+                var d = new Date().getTime();
+                ping('https://www.google.com.hk/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png?t='+d);
 
                 //$("#appspot").html("<font color='red'>链接失败</font>");
             },
