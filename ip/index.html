@@ -254,7 +254,7 @@
             dataType: "jsonp",
             timeout: 5000,
             success: function(re) {
-                $("#freegeoip").html(re.ip + "&nbsp;|&nbsp;" + re.country_name);
+                $("#freegeoip").html(re.ip);
             },
             error: function() {
                 $("#freegeoip").html("<font color='red'>链接失败</font>");
