@@ -36,6 +36,14 @@
 </head>
 
 <body>
+    <!--视频头部背景-->
+    <div class="banner-video">
+        <!--视频来自阿里云首页，有需要请自行更换-->
+        <video autoplay loop muted>
+            <source src="https://acd-assets.alicdn.com/20201111/3840-banner.mp4" type="video/mp4"></video>
+        <!---source src="https://cdn.jsdelivr.net/gh/5iux/uploads/pic/3840-banner.mp4" type="video/mp4"></video-->
+    </div>
+
     <!--topbar开始-->
     <style>
         .navbar-toggler svg{ width: 24px; height: 24px; }
@@ -85,14 +93,7 @@
         </div>
     </nav>
     <!--topbar结束-->
-    <div class="container" style="margin-top: 100px; position: relative;">
-        <!--视频头部背景-->
-        <div class="banner-video">
-            <!--视频来自阿里云首页，有需要请自行更换-->
-            <video width="100%" autoplay loop muted>
-                <source src="https://acd-assets.alicdn.com/20201111/3840-banner.mp4" type="video/mp4"></video>
-                <!---source src="https://cdn.jsdelivr.net/gh/5iux/uploads/pic/3840-banner.mp4" type="video/mp4"></video-->
-        </div>
+    <div class="container" style="margin-top: 100px; position: relative; z-index: 100;">
         <!--搜索开始-->
         <div id="search" class="s-search">
             <div id="search-list" class="hide-type-list">

@@ -45,11 +45,14 @@ svg.icon { width: 14px; height: 14px; margin: 0 5px 0 8px; vertical-align: -0.15
 .mylist li.title .icon{color: #fff;}
 .banner-video {
     position: absolute;
-    width: 1920px;
+    width: 100%;
     height: 270px; overflow: hidden;
-    left: 50%;
-    margin-left: -960px;
-    margin-top: -160px;
+    left: 0; top:0;
+}
+.banner-video video{
+    position: absolute;
+    width: 1920px;
+    left:50%; margin-left: -960px;
 }
 
 @media screen and (min-width:1200px){
@@ -60,7 +63,8 @@ svg.icon { width: 14px; height: 14px; margin: 0 5px 0 8px; vertical-align: -0.15
     #he-plugin-simple{ overflow: hidden ; }
 }
 @media screen and (max-width:767px){
-    .banner-video {display: none;}
+    .banner-video{ height: 210px;}
+    .banner-video video{ width: 760px; margin-left: -380px; margin-top: 60px;}
     #search{margin:25px auto 15px}
     .s-type-list label{padding:5px 0}
     .search-type{overflow:hidden}
