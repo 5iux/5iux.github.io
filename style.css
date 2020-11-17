@@ -8,7 +8,7 @@ github：https://github.com/5iux/5iux.github.io
 body{ font-size: 14px; background: #f4f8fb; overflow-x:hidden;  }
 svg.icon { width: 14px; height: 14px; margin: 0 5px 0 8px; vertical-align: -0.15em; fill: currentColor; overflow: hidden;}
 /* --- search --- */
-#search{width:100%;margin:150px auto 60px; padding: 0px; position: relative; z-index: 10000;}
+#search{width:100%;margin:150px auto 60px; padding: 0px; position: relative; z-index: 100;}
 #search form{position:relative}
 #search-text{width:100%;height:50px; line-height: 50px; text-indent: 10px; font-size:16px;border-radius:5px;background-color:#fff; border:none; box-shadow: 0 0.5rem 0.625rem #d4d4d44d;transition: 0.3s all linear;}
 #search-text:focus{background: #fff; box-shadow: 0 0px 24px 0 rgba(50, 50, 50, 0.08); border-color: #fff; }
