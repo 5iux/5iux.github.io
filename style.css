@@ -62,7 +62,8 @@ svg.icon { width: 14px; height: 14px; margin: 0 5px 0 8px; vertical-align: -0.15
     #he-plugin-simple{ overflow: hidden ; }
 }
 @media screen and (max-width:767px){
-    .banner-video{ top:60px; }
+    .banner-video{ top:60px; height: 180px; }
+    .banner-video video{ position: absolute; width:780px; margin-left: -390px; left: 50%;  }
     #search{margin:25px auto 15px}
     .s-type-list label{padding:5px 0}
     .search-type{overflow:hidden}
