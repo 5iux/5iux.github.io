@@ -5,7 +5,7 @@ github：https://github.com/5iux/5iux.github.io
 日期：2020-09-24
 版权所有，请勿删除
 */
-body{ font-size: 14px; background: #f4f8fb; }
+body{ font-size: 14px; background: #f4f8fb; overflow-x:hidden;  }
 svg.icon { width: 14px; height: 14px; margin: 0 5px 0 8px; vertical-align: -0.15em; fill: currentColor; overflow: hidden;}
 /* --- search --- */
 #search{width:100%;margin:150px auto 60px; padding: 0px;}
@@ -31,18 +31,27 @@ svg.icon { width: 14px; height: 14px; margin: 0 5px 0 8px; vertical-align: -0.15
 .type-text{position:absolute;left:0;width:75px;padding-left:9pt;font-size:1pc;line-height:31px}
 /*.type-text:after{content:"\f105";font-family:FontAwesome;margin:0 0 0 15px}*/
 .search-type{white-space:nowrap;margin:0}.search-type label{margin:0}
-.search-type li{display:inline-block}
+.search-type li{display:inline-block; background: rgb(255 255 255 / 0.4); border-radius: 3px 3px 0 0;}
 .search-type li label{display:inline-block;padding:0 11px;font-size:14px;line-height:31px;border-radius:3px 3px 0 0;cursor:pointer}
 .search-type input:checked+label,.search-type input:hover+label{background-color:#fff;box-shadow: -6px 10px 20px #eee}
 #search-text::-webkit-input-placeholder {color: #bbb;}
 .set-check{margin-top:3px;font-size:9pt}.set-check label{margin-left:3px}
 .set-check input,.set-check label{opacity:0;transition:all .3s ease}
 .search-type li{list-style:none;display:inline-block}
-.mylist{list-style: none; padding:30px 20px; margin: 40px 0; border-radius: 5px; background: #fff; box-shadow: 0 0.5rem 0.625rem #d4d4d44d}
+.mylist{list-style: none; padding:30px 20px; position: relative; z-index: 1000; margin: 40px 0; border-radius: 5px; background: #fff; box-shadow: 0 0.5rem 0.625rem #d4d4d44d}
 .mylist li{ min-width: 105px; margin:10px 0 0;  font-size: 14px; overflow: hidden; padding: 0;}
 .mylist li a {  color: #555;}
 .mylist li.title{width: auto; min-width: auto; margin: 0; position: absolute; margin-top: -50px; background: #29f; color: #fff; height: 35px; font-size: 16px; line-height: 33px; border-radius: 20px; box-shadow: 0 0.5rem 0.625rem #2299ff4d; padding: 0 20px 0 10px;}
 .mylist li.title .icon{color: #fff;}
+.banner-video {
+    position: absolute;
+    width: 1920px;
+    height: 270px; overflow: hidden;
+    left: 50%;
+    margin-left: -960px;
+    margin-top: -160px;
+}
+
 @media screen and (min-width:1200px){
     .mylist li{ min-width: 118px;}
 
