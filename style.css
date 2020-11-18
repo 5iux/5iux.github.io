@@ -49,25 +49,25 @@ svg.icon { width: 14px; height: 14px; margin: 0 5px 0 8px; vertical-align: -0.15
     overflow: hidden;
     left: 0; top:0;
 }
-.banner-video video{
-    width: 100%;
-}
+.banner-video video{width:2048px; float:left; }
 .video-bottom-cover{ width: 100%; height: 50%; position: absolute; bottom:0px; z-index: 10; }
 
 @media screen and (min-width:1200px){
     .mylist li{ min-width: 118px;}
-
 }
 @media screen and (max-width: 992px){
     #he-plugin-simple{ overflow: hidden ; }
+    .banner-video video{width:1200px; }
 }
 @media screen and (max-width:767px){
-    .banner-video{ top:60px; height: 180px; }
-    .banner-video video{ position: absolute; width:780px; margin-left: -390px; left: 50%;  }
+    .banner-video{ top:60px; }
+    .banner-video video{width:960px; }
     #search{margin:25px auto 15px}
     .s-type-list label{padding:5px 0}
     .search-type{overflow:hidden}
     .search-list{height:30px;overflow-y:hidden;overflow-x:scroll;white-space:nowrap}
+}
+@media screen and (max-width:560px){
 }
 
 
