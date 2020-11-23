@@ -235,7 +235,6 @@
             timeout: 5000,
             success: function(re) {
                 $("#pconline").html(re.ip + "&nbsp;|&nbsp;" + re.city);
-
             },
             error: function() {
                 $("#pconline").html("<font color='red'>链接失败</font>");
@@ -290,6 +289,7 @@
             },
             complete: function() {},
         });
+
         function ping(url) {
             var img = new Image();
             var start = new Date().getTime();
@@ -320,7 +320,7 @@
             },
             error: function(re) {
                 var d = new Date().getTime();
-                ping('https://www.google.com.hk/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png?t='+d);
+                ping('https://www.google.com/favicon.ico?t=' + d);
 
                 //$("#appspot").html("<font color='red'>链接失败</font>");
             },
