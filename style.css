@@ -36,7 +36,7 @@ svg.icon { width: 14px; height: 14px; margin: 0 5px 0 8px; vertical-align: -0.15
 .search-type input:checked+label,.search-type input:hover+label{background-color:#fff;}
 #search-text::-webkit-input-placeholder {color: #bbb;}
 #word{ position: absolute; list-style: none; top:55px; left: 0px; width: 100%; background: rgba(259,259,259,0.9); border-radius: 5px; z-index:20000; padding: 15px 10px; box-shadow: 0 0 10px #aaa; }
-#word li{ height:35px; padding: 0 5px; text-indent: 40px; background: url(sou.svg) no-repeat 5px; background-size: 20px;  line-height: 35px; cursor: pointer; font-size: 16px; border-radius: 5px;}
+#word li{ height:35px; padding: 0 5px; text-indent: 30px; background: url(sou.svg) no-repeat 5px; background-size: 20px;  line-height: 35px; cursor: pointer; font-size: 16px; border-radius: 5px;}
 #word li:hover{ background-color: #ddd;}
 .set-check{margin-top:3px;font-size:9pt}.set-check label{margin-left:3px}
 .set-check input,.set-check label{opacity:0;transition:all .3s ease}
@@ -73,6 +73,7 @@ svg.icon { width: 14px; height: 14px; margin: 0 5px 0 8px; vertical-align: -0.15
     .s-type-list label{padding:5px 0}
     .search-type{overflow:hidden}
     .search-list{height:30px;overflow-y:hidden;overflow-x:scroll;white-space:nowrap}
+    #he-plugin-simple{ display: none !important; }
 }
 @media screen and (max-width:560px){
 }
