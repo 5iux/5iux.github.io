@@ -176,6 +176,18 @@
     </ul>
     <script>
     $(document).ready(function() {
+        function getflag(ip) {
+            $.ajax({
+                url: "https://5iux.cn/ipdata/?ip=" + re.ip,
+                dataType: "jsonp",
+                timeout: 5000,
+                success: function(json) {
+                    $("#pconline").append(json.flag.emoji);
+                },
+                error: function() {},
+                complete: function() {},
+            });
+        }
         $.ajax({
             //太平洋 ip接口
             url: "https://whois.pconline.com.cn/ipJson.jsp",
@@ -183,16 +195,6 @@
             timeout: 5000,
             success: function(re) {
                 $("#pconline").html(re.ip + "&nbsp;|&nbsp;" + re.city);
-                $.ajax({
-                    url: "https://5iux.cn/ipdata/?ip=" + re.ip,
-                    dataType: "json",
-                    timeout: 5000,
-                    success: function(json) {
-                        $("#pconline").append(json.city);
-                    },
-                    error: function() {},
-                    complete: function() {},
-                });
             },
             error: function() {
                 $("#pconline").html("<font color='red'>链接失败</font>");
