@@ -185,7 +185,7 @@
                 $("#pconline").html(re.ip + "&nbsp;|&nbsp;" + re.city);
                 $.ajax({
                     url: "https://5iux.cn/ipdata/?ip=" + re.ip,
-                    dataType: "jsonp",
+                    dataType: "json",
                     timeout: 5000,
                     success: function(json) {
                         $("#pconline").append(json.city);
