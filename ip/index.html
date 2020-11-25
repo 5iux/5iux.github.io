@@ -177,12 +177,6 @@
     </ul>
     <script>
     $(document).ready(function() {
-        $(".close").click(function(event) {
-            $(".st").fadeOut();
-        });
-        $(".speed").click(function(event) {
-            $(".st").fadeIn();
-        });
         $.ajax({
             //太平洋 ip接口
             url: "https://whois.pconline.com.cn/ipJson.jsp",
