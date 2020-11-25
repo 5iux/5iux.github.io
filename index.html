@@ -23,6 +23,7 @@
     <link rel="stylesheet" id="font-awesome-css" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css?ver=1.1422" type="text/css" media="all">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
     <script src="https://at.alicdn.com/t/font_400990_j21lstb4wx.js"></script>
+    <script src="sou.js"></script>
     <link rel='stylesheet' href='style.css'>
     <script>
         var _hmt = _hmt || [];
@@ -109,13 +110,16 @@
                     </ul>
                 </div>
             </div>
-            <form action="https://www.baidu.com/s?wd=" method="get" target="_blank" id="super-search-fm"><input type="text" id="search-text" placeholder="百度一下" style="outline:0" autocomplete="off"><button type="submit"><svg style="width: 20px; height: 20px; margin:7px 0; color: #29f;" class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-sousuo"></use>
-                    </svg></button></form>
+            <form action="https://www.baidu.com/s?wd=" method="get" target="_blank" id="super-search-fm">
+                <input type="text" id="search-text" placeholder="百度一下" style="outline:0" autocomplete="off">
+                <button type="submit"><svg style="width: 20px; height: 20px; margin:7px 0; color: #29f;" class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-sousuo"></use></svg></button>
+                <ul id="word" style="display: none;"></ul>
+            </form>
             <div class="set-check hidden-xs">
                 <input type="checkbox" id="set-search-blank" class="bubble-3" autocomplete="off">
             </div>
-            <div id="word"></div>
+            
         </div>
         <!--搜索结束-->
         <ul class="mylist row">
