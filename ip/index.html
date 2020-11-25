@@ -197,6 +197,11 @@
             </span>
         </li>
         <li>
+            <span>IP-API</span>
+            <span id="ip-api">查询中...
+            </span>
+        </li>
+        <li>
             <span>IPINFO</span>
             <span id="ipinfo">查询中...
             </span>
@@ -245,6 +250,18 @@
             },
             error: function() {
                 $("#ipsb").html("<font color='red'>链接失败</font>");
+            },
+            complete: function() {},
+        });
+        $.ajax({
+            url: "http://ip-api.com/json/?lang=zh-CN",
+            dataType: "jsonp",
+            timeout: 5000,
+            success: function(re) {
+                $("#ip-api").html(re.query + "&nbsp;|&nbsp;" + re.country);
+            },
+            error: function() {
+                $("#ip-api").html("<font color='red'>链接失败</font>");
             },
             complete: function() {},
         });
