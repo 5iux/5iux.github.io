@@ -129,7 +129,6 @@
         line-height: 30px;
         text-align: center;
     }
-
     </style>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
 </head>
@@ -184,6 +183,11 @@
             timeout: 5000,
             success: function(re) {
                 $("#pconline").html(re.ip + "&nbsp;|&nbsp;" + re.city);
+                $.getJSON("https://5iux.cn/ipdata/?ip="+re.ip,
+                    function(json) {
+                        $("#pconline").append(json.flag.emoji);
+                    }
+                );
             },
             error: function() {
                 $("#pconline").html("<font color='red'>链接失败</font>");
