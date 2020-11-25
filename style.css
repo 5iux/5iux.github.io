@@ -35,9 +35,9 @@ svg.icon { width: 14px; height: 14px; margin: 0 5px 0 8px; vertical-align: -0.15
 .search-type li label{display:inline-block;padding:0 11px;font-size:14px;line-height:31px;border-radius:3px 3px 0 0;cursor:pointer}
 .search-type input:checked+label,.search-type input:hover+label{background-color:#fff;}
 #search-text::-webkit-input-placeholder {color: #bbb;}
-#word{ position: absolute; list-style: none; top:55px; left: 0px; width: 100%; background: rgba(259,259,259,0.9); border-radius: 5px; z-index:20000; padding: 10px 20px; box-shadow: 0 0 10px #aaa; }
-#word li{ height:35px;  line-height: 35px; cursor: pointer; font-size: 16px;}
-#word li:hover{ background: #ddd;}
+#word{ position: absolute; list-style: none; top:55px; left: 0px; width: 100%; background: rgba(259,259,259,0.9); border-radius: 5px; z-index:20000; padding: 15px 10px; box-shadow: 0 0 10px #aaa; }
+#word li{ height:35px; padding: 0 5px; text-indent: 40px; background: url(sou.svg) no-repeat 5px; background-size: 20px;  line-height: 35px; cursor: pointer; font-size: 16px; border-radius: 5px;}
+#word li:hover{ background-color: #ddd;}
 .set-check{margin-top:3px;font-size:9pt}.set-check label{margin-left:3px}
 .set-check input,.set-check label{opacity:0;transition:all .3s ease}
 .search-type li{list-style:none;display:inline-block}

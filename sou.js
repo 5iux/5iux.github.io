@@ -19,7 +19,7 @@ $(function() {
                     $('#word').hide();
                 }
                 $.each(data.s, function() {
-                    $('#word').append('<li><svg class="icon" style=" width: 15px; height: 15px; opacity: 0.5;" aria-hidden="true"><use xlink:href="#icon-sousuo"></use></svg> ' + this + '</li>');
+                    $('#word').append('<li>' + this + '</li>');
                 })
             },
             error: function() {
