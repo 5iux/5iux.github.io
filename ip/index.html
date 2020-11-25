@@ -255,7 +255,7 @@
         });
         $.ajax({
             url: "http://ip-api.com/json/",
-            dataType: "jsonp",
+            dataType: "json",
             timeout: 5000,
             success: function(re) {
                 $("#ip-api").html(re.query + "&nbsp;|&nbsp;" + re.country);
