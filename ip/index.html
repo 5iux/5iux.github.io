@@ -202,8 +202,8 @@
             </span>
         </li>
         <li>
-            <span>Freegeoip</span>
-            <span id="freegeoip">查询中...
+            <span>IP-API</span>
+            <span id="ip-api">查询中...
             </span>
         </li>
         <li>
@@ -254,14 +254,14 @@
             complete: function() {},
         });
         $.ajax({
-            url: "https://freegeoip.app/json/",
+            url: "http://ip-api.com/json/",
             dataType: "jsonp",
             timeout: 5000,
             success: function(re) {
-                $("#freegeoip").html(re.ip);
+                $("#ip-api").html(re.query + "&nbsp;|&nbsp;" + re.country);
             },
             error: function() {
-                $("#freegeoip").html("<font color='red'>链接失败</font>");
+                $("#ip-api").html("<font color='red'>链接失败</font>");
             },
             complete: function() {},
         });
