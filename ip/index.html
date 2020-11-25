@@ -130,47 +130,6 @@
         text-align: center;
     }
 
-    .st {
-        width: 100%;
-        height: 100%;
-        position: fixed;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        top: 0;
-        z-index: 200000;
-        background: rgba(0, 0, 0, 0.4);
-    }
-
-    .st .if {
-        width: calc(100% - 60px);
-        max-width: 640px;
-        min-width: 320px;
-        height: 590px;
-        position: absolute;
-        margin: auto;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        top: 0;
-        z-index: 1000;
-        box-shadow: 0 0 20px rgba(173, 173, 173, 0.5);
-        border-radius: 10px;
-        overflow: hidden;
-    }
-
-    .st .if .close {
-        width: 20px;
-        height: 20px;
-        position: absolute;
-        z-index: 20;
-        left: 15px;
-        top: 15px;
-        background: url(close.png) no-repeat center;
-        background-size: 100%;
-        opacity: 0.5;
-        cursor: pointer;
-    }
     </style>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
 </head>
@@ -195,11 +154,6 @@
         <li>
             <span>IPAPI</span>
             <span id="ipapi">查询中...
-            </span>
-        </li>
-        <li>
-            <span>IP-API</span>
-            <span id="ip-api">查询中...
             </span>
         </li>
         <li>
@@ -251,18 +205,6 @@
             },
             error: function() {
                 $("#ipsb").html("<font color='red'>链接失败</font>");
-            },
-            complete: function() {},
-        });
-        $.ajax({
-            url: "http://ip-api.com/json/?lang=zh-CN",
-            dataType: "jsonp",
-            timeout: 5000,
-            success: function(re) {
-                $("#ip-api").html(re.query + "&nbsp;|&nbsp;" + re.country);
-            },
-            error: function() {
-                $("#ip-api").html("<font color='red'>链接失败</font>");
             },
             complete: function() {},
         });
