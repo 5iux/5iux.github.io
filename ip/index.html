@@ -146,6 +146,11 @@
             </span>
         </li>
         <li>
+            <span>搜狐</span>
+            <span id="sohu">查询中...
+            </span>
+        </li>
+        <li>
             <span>IP.SB</span>
             <span id="ipsb">查询中...
             </span>
@@ -263,6 +268,10 @@
             complete: function() {},
         });
     });
+    </script>
+    <script src="https://pv.sohu.com/cityjson?ie=utf-8"></script>
+    <script>
+    $("#sohu").html(returnCitySN.cip + "&nbsp;|&nbsp;" + returnCitySN.cname);
     </script>
 </body>
 
