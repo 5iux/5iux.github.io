@@ -183,11 +183,16 @@
             timeout: 5000,
             success: function(re) {
                 $("#pconline").html(re.ip + "&nbsp;|&nbsp;" + re.city);
-                $.getJSON("https://5iux.cn/ipdata/?ip="+re.ip,
-                    function(json) {
+                $.ajax({
+                    url: "https://5iux.cn/ipdata/?ip=" + re.ip,
+                    dataType: "jsonp",
+                    timeout: 5000,
+                    success: function(json) {
                         $("#pconline").append(json.flag.emoji);
-                    }
-                );
+                    },
+                    error: function() {},
+                    complete: function() {},
+                });
             },
             error: function() {
                 $("#pconline").html("<font color='red'>链接失败</font>");
