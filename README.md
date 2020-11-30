@@ -5,7 +5,7 @@
 
 喜欢的可自行设置主页，或者自己下载源码修改
 
-链接1：[https://g.5iux.cn/](https://g.5iux.cn/)    
+链接1：[https://sou.5iux.cn/](https://sou.5iux.cn/)    
 
 链接2：[https://cn5iux.gitee.io/](https://cn5iux.gitee.io/)    
 
