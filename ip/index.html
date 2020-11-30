@@ -160,11 +160,6 @@
             </span>
         </li>
         <li>
-            <span>IPINFO</span>
-            <span id="ipinfo">查询中...
-            </span>
-        </li>
-        <li>
             <span>谷歌</span>
             <span id="appspot">查询中...
             </span>
@@ -214,18 +209,6 @@
             },
             error: function() {
                 $("#ipapi").html("<font color='red'>链接失败</font>");
-            },
-            complete: function() {},
-        });
-        $.ajax({
-            url: "https://ipinfo.io/?token=0d24cdc2ef7bf7",
-            dataType: "json",
-            timeout: 5000,
-            success: function(re) {
-                $("#ipinfo").html(re.ip + "&nbsp;|&nbsp;" + re.city);
-            },
-            error: function() {
-                $("#ipinfo").html("<font color='red'>链接失败</font>");
             },
             complete: function() {},
         });
