@@ -35,7 +35,7 @@ $(function() {
         $('#search-text').val(word);
         $('#word').hide();
         //$("form").submit();
-         $('button').trigger('click');//触发搜索事件
+         $('.submit').trigger('click');//触发搜索事件
     })
 
 })
