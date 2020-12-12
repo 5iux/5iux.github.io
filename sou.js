@@ -16,6 +16,7 @@ $(function() {
                 $('#word').empty().show();
                 if (data.s == '') {
                     //$('#word').append('<div class="error">Not find  "' + keywords + '"</div>');
+                    $('#word').empty();
                     $('#word').hide();
                 }
                 $.each(data.s, function() {
@@ -33,9 +34,14 @@ $(function() {
     $(document).on('click', '#word li', function() {
         var word = $(this).text();
         $('#search-text').val(word);
+        $('#word').empty();
         $('#word').hide();
         //$("form").submit();
          $('.submit').trigger('click');//触发搜索事件
+    })
+    $(document).on('click', '.container,.banner-video,nav', function() {
+        $('#word').empty();
+        $('#word').hide();
     })
 
 })
