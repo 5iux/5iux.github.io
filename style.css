@@ -83,6 +83,11 @@ svg.icon { width: 14px; height: 14px; margin: 0 5px 0 8px; vertical-align: -0.15
     .s-type-list label{padding:5px 0}
     .search-type{overflow:hidden}
     .search-list{height:30px;overflow-y:hidden;overflow-x:scroll;white-space:nowrap}
+    .mylist{ border-radius: 5px;}
+    .mylist li.col-4{ margin: 5px 0 5px;}
+    .mylist li.col-4 svg{ width: 30px; height: 30px; padding: 5px;border-radius: 5px;}
+    .mylist li.col-4 span{ font-size: 12px; }
+
 
 }
 @media screen and (max-width:560px){
