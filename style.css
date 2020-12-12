@@ -48,7 +48,7 @@ svg.icon { width: 14px; height: 14px; margin: 0 5px 0 8px; vertical-align: -0.15
 .set-check input,.set-check label{opacity:0;transition:all .3s ease}
 .search-type li{list-style:none;display:inline-block}
 .mylist{list-style: none; padding:30px 20px; position: relative; z-index: 1000; margin: 40px 0; border-radius: 20px; background: #fff; box-shadow: 0 0.5rem 0.625rem #d4d4d44d}
-.mylist li.col-3{ width: 100px; margin:10px 0 10px;  font-size: 14px; overflow: hidden; padding: 0;}
+.mylist li.col-3{ width: 100px;margin:10px 0 10px;  font-size: 14px; overflow: hidden; padding: 0;}
 .mylist li.col-3 svg{ display: block; width: 45px; height: 45px; padding: 8px; background: #fff;border: 1px solid #eee;  border-radius:10px; margin: 0 auto; }
 .mylist li.col-3:hover svg{ background: #eee; }
 .mylist li.col-3 span{ width: 100%; display: block; height: 26px; line-height: 26px; text-align:center; font-size: 13px; }
@@ -68,8 +68,12 @@ svg.icon { width: 14px; height: 14px; margin: 0 5px 0 8px; vertical-align: -0.15
 .bottom-cover{ width: 100%; height: 50%; position: absolute; bottom:0px; z-index: 10; }
 
 @media screen and (min-width:1200px){
-    .mylist li{ min-width: 106px;}
+    .mylist li.col-3{ min-width: 132px;}
 }
+@media screen and (min-width:992px) and (max-width:1200px){
+    .mylist li.col-3{ min-width: 110px;}
+}
+
 @media screen and (max-width: 992px){
     #he-plugin-simple{ display: none !important; }
     .banner-video video{width:1200px; }
