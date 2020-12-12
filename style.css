@@ -55,7 +55,6 @@ svg.icon { width: 14px; height: 14px; margin: 0 5px 0 8px; vertical-align: -0.15
 
 .mylist li a {  color: #555; display: block;}
 .mylist li.title{width: 100%; min-width: auto; margin: 0; height: 35px; font-size: 16px; line-height: 33px; padding: 0 20px 0 10px; border-bottom: 1px solid #eee; margin-bottom: 10px;}
-.mylist li.title .icon{color: #fff; }
 .banner-video {
     position: absolute;
     width: 100%;
