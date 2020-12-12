@@ -48,10 +48,10 @@ svg.icon { width: 14px; height: 14px; margin: 0 5px 0 8px; vertical-align: -0.15
 .set-check input,.set-check label{opacity:0;transition:all .3s ease}
 .search-type li{list-style:none;display:inline-block}
 .mylist{list-style: none; padding:30px 20px; position: relative; z-index: 1000; margin: 40px 0; border-radius: 20px; background: #fff; box-shadow: 0 0.5rem 0.625rem #d4d4d44d}
-.mylist li.col-4{ width: 100px; margin:10px 0 10px;  font-size: 14px; overflow: hidden; padding: 0;}
-.mylist li.col-4 svg{ display: block; width: 45px; height: 45px; padding: 8px; background: #fff;border: 1px solid #eee;  border-radius:10px; margin: 0 auto; }
-.mylist li.col-4:hover svg{ background: #eee; }
-.mylist li.col-4 span{ width: 100%; display: block; height: 26px; line-height: 26px; text-align:center; font-size: 13px; }
+.mylist li.col-3{ width: 100px; margin:10px 0 10px;  font-size: 14px; overflow: hidden; padding: 0;}
+.mylist li.col-3 svg{ display: block; width: 45px; height: 45px; padding: 8px; background: #fff;border: 1px solid #eee;  border-radius:10px; margin: 0 auto; }
+.mylist li.col-3:hover svg{ background: #eee; }
+.mylist li.col-3 span{ width: 100%; display: block; height: 26px; line-height: 26px; text-align:center; font-size: 13px; }
 
 .mylist li a {  color: #555; display: block;}
 .mylist li.title{width: auto; min-width: auto; margin: 0; position: absolute; margin-top: -50px; background: #29f; color: #fff; height: 35px; font-size: 16px; line-height: 33px; border-radius: 20px; box-shadow: 0 0.5rem 0.625rem #2299ff4d; padding: 0 20px 0 10px;}
@@ -84,9 +84,9 @@ svg.icon { width: 14px; height: 14px; margin: 0 5px 0 8px; vertical-align: -0.15
     .search-type{overflow:hidden}
     .search-list{height:30px;overflow-y:hidden;overflow-x:scroll;white-space:nowrap}
     .mylist{ border-radius: 5px;}
-    .mylist li.col-4{ margin: 5px 0 5px;}
-    .mylist li.col-4 svg{ width: 30px; height: 30px; padding: 5px;border-radius: 5px;}
-    .mylist li.col-4 span{ font-size: 12px; }
+    .mylist li.col-3{ margin: 5px 0 5px;}
+    .mylist li.col-3 svg{ width: 30px; height: 30px; padding: 5px;border-radius: 5px;}
+    .mylist li.col-3 span{ font-size: 12px; }
 
 
 }
