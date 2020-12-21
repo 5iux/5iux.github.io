@@ -155,11 +155,6 @@
             </span>
         </li>
         <li>
-            <span>IPV6</span>
-            <span id="ipv6sb">查询中...
-            </span>
-        </li>
-        <li>
             <span>IPAPI</span>
             <span id="ipapi">查询中...
             </span>
@@ -167,6 +162,11 @@
         <li>
             <span>谷歌</span>
             <span id="appspot">查询中...
+            </span>
+        </li>
+        <li>
+            <span>IPV6</span>
+            <span id="ipv6sb">查询中...
             </span>
         </li>
         <li style="height: 60px;">
@@ -213,7 +213,7 @@
                 $("#ipv6sb").html(re.ip + "&nbsp;|&nbsp;" + re.country);
             },
             error: function() {
-                $("#ipv6sb").html("<font color='red'>不支持！</font>");
+                $("#ipv6sb").hide();
             },
             complete: function() {},
         });
