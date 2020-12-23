@@ -48,9 +48,9 @@ svg.icon { width: 14px; height: 14px; margin: 0 5px 0 8px; vertical-align: -0.15
 .set-check input,.set-check label{opacity:0;transition:all .3s ease}
 .search-type li{list-style:none;display:inline-block}
 .mylist{list-style: none; padding:10px 20px; position: relative; z-index: 1000; margin: 20px 0; border-radius: 15px; background: #fff; box-shadow: 0 0.5rem 0.625rem #d4d4d44d}
-.mylist li.col-3{ width: 100px;margin:10px 0 10px;  font-size: 14px; overflow: hidden; padding: 0;}
+.mylist li.col-3{ width: 100px; transition: 0.3s all linear; font-size: 14px; overflow: hidden; padding:10px 0; border-radius: 10px;}
 .mylist li.col-3 svg{ display: block; width: 45px; height: 45px; padding: 8px; background: #fff;border: 1px solid #eee;  border-radius:10px; margin: 0 auto; }
-.mylist li.col-3:hover svg{ background: #eee; }
+.mylist li.col-3:hover{ background: #eee; }
 .mylist li.col-3 span{ width: 100%; display: block; height: 26px; line-height: 26px; text-align:center; font-size: 13px; }
 
 .mylist li a {  color: #555; display: block;}
