@@ -164,11 +164,6 @@
             <span id="appspot">查询中...
             </span>
         </li>
-        <li>
-            <span>IPV6</span>
-            <span id="ipv6sb">查询中...
-            </span>
-        </li>
         <li style="height: 60px;">
             <span style="border: none; width: 50%;">
                 <a style="background: #29f; color: #fff; border: none;" href="https://5iux.speedtestcustom.com/" target="_blank">测速</a>
@@ -202,18 +197,6 @@
             },
             error: function() {
                 $("#ipsb").html("<font color='red'>链接失败</font>");
-            },
-            complete: function() {},
-        });
-        $.ajax({
-            url: "https://api-ipv6.ip.sb/geoip",
-            dataType: "jsonp",
-            timeout: 5000,
-            success: function(re) {
-                $("#ipv6sb").html(re.ip + "&nbsp;|&nbsp;" + re.country);
-            },
-            error: function() {
-                $("#ipv6sb").hide();
             },
             complete: function() {},
         });
