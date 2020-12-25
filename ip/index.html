@@ -221,7 +221,7 @@
             dataType: "jsonp",
             timeout: 5000,
             success: function(re) {
-                $("#appspot").html(re.address + "&nbsp;|&nbsp;" + re.geographical);
+                $("#appspot").html(re.address + "&nbsp;|&nbsp;" + re.geographical + re.flag);
             },
             error: function(re) {
                 var d = new Date().getTime();
