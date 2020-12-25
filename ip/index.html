@@ -155,11 +155,6 @@
             </span>
         </li>
         <li>
-            <span>IPAPI</span>
-            <span id="ipapi">查询中...
-            </span>
-        </li>
-        <li>
             <span>谷歌</span>
             <span id="appspot">查询中...
             </span>
@@ -200,19 +195,6 @@
             },
             complete: function() {},
         });
-        $.ajax({
-            url: "https://ipapi.co/jsonp",
-            dataType: "jsonp",
-            timeout: 5000,
-            success: function(re) {
-                $("#ipapi").html(re.ip + "&nbsp;|&nbsp;" + re.country_name);
-            },
-            error: function() {
-                $("#ipapi").html("<font color='red'>链接失败</font>");
-            },
-            complete: function() {},
-        });
-
         function ping(url) {
             var img = new Image();
             var start = new Date().getTime();
