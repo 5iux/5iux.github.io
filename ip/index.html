@@ -211,7 +211,7 @@
             dataType: "jsonp",
             timeout: 5000,
             success: function(re) {
-                $("#ipsb").html(re.ip + "&nbsp;|&nbsp;" + re.country);
+                $("#ipsb").html(re.ip + "&nbsp;|&nbsp;" + re.country + "&nbsp;&nbsp;<img class='flag' src='https://ipv6-test.com/img/flags-round/" + re.country_code+".png'>");
             },
             error: function() {
                 $("#ipsb").html("<font color='red'>链接失败</font>");
