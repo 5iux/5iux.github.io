@@ -178,6 +178,11 @@
             </span>
         </li>
         <li>
+            <span>Freegeoip</span>
+            <span id="freegeoip">查询中...
+            </span>
+        </li>
+        <li>
             <span>谷歌</span>
             <span id="appspot">查询中...
             </span>
@@ -215,6 +220,18 @@
             },
             error: function() {
                 $("#ipsb").html("<font color='red'>链接失败</font>");
+            },
+            complete: function() {},
+        });
+        $.ajax({
+            url: "https://freegeoip.app/json/",
+            dataType: "jsonp",
+            timeout: 5000,
+            success: function(re) {
+                $("#freegeoip").html(re.ip + "&nbsp;|&nbsp;" + re.country_code + "&nbsp;&nbsp;<img class='flag' src='https://ipv6-test.com/img/flags-round/" + re.country_code+".png'>");
+            },
+            error: function() {
+                $("#freegeoip").html("<font color='red'>链接失败</font>");
             },
             complete: function() {},
         });
