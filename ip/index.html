@@ -216,7 +216,7 @@
             dataType: "jsonp",
             timeout: 5000,
             success: function(re) {
-                $("#ipsb").html(re.ip + "&nbsp;|&nbsp;" + re.country + "&nbsp;&nbsp;<img class='flag' src='https://ipv6-test.com/img/flags-round/" + re.country_code+".png'>");
+                $("#ipsb").html(re.ip + "&nbsp;|&nbsp;" + re.country + "&nbsp;&nbsp;<img class='flag' src='https://cdn.jsdelivr.net/gh/5iux/dyimg/flag/" + re.country_code+".svg'>");
             },
             error: function() {
                 $("#ipsb").html("<font color='red'>链接失败</font>");
@@ -228,7 +228,7 @@
             dataType: "jsonp",
             timeout: 5000,
             success: function(re) {
-                $("#freegeoip").html(re.ip + "&nbsp;|&nbsp;" + re.country_code + "&nbsp;&nbsp;<img class='flag' src='https://ipv6-test.com/img/flags-round/" + re.country_code+".png'>");
+                $("#freegeoip").html(re.ip + "&nbsp;|&nbsp;" + re.country_code + "&nbsp;&nbsp;<img class='flag' src='https://cdn.jsdelivr.net/gh/5iux/dyimg/flag/" + re.country_code+".svg'>");
             },
             error: function() {
                 $("#freegeoip").html("<font color='red'>链接失败</font>");
