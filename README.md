@@ -5,13 +5,16 @@
 
 喜欢的可自行设置主页，或者自己下载源码修改
 
-链接1：[https://sou.5iux.cn/](https://sou.5iux.cn/)    
+图标基于[iconfont](https://www.iconfont.cn/)   
+需要自定义图标，登录iconfont网站自建项目即可（伸手党请关闭当前页面）   
 
-链接2：[https://cn5iux.gitee.io/](https://cn5iux.gitee.io/)    
 
-链接3：[https://5iux.github.io/](https://5iux.github.io/)   
 
-链接4：[https://5iux.netlify.app/](https://5iux.netlify.app/)   
+链接1：[https://cn5iux.gitee.io/](https://cn5iux.gitee.io/)    
+
+链接2：[https://5iux.github.io/](https://5iux.github.io/)   
+
+链接3：[https://5iux.netlify.app/](https://5iux.netlify.app/)   
 
  
 
