@@ -10,17 +10,10 @@
 
 
 
-链接1：[https://cn5iux.gitee.io/](https://cn5iux.gitee.io/)    
-
-链接2：[https://5iux.github.io/](https://5iux.github.io/)   
- 
-
- 
-
-![图](https://cdn.jsdelivr.net/gh/5iux/uploads/pic/20200923154548.gif)   
+![图](https://cdn.jsdelivr.net/gh/5iux/uploads/pic/20210817115329.gif)   
 
 
-![图](https://cdn.jsdelivr.net/gh/5iux/uploads/pic/20200724164819.png)   
+![图](https://cdn.jsdelivr.net/gh/5iux/uploads/pic/20210817115705.gif)   
 
      
 
